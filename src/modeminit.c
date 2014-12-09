@@ -1507,7 +1507,7 @@ int initmodem(char *new_smsc, int receiving)
 
   // -----------------------------------------------------------------------------------------------
   writelogfile(LOG_INFO, 0, "Selecting PDU mode");
-  strcpy(command,"AT+CMGF=1\r");
+  strcpy(command,"AT+CMGF=0\r");
   retries=0;
   do
   {
