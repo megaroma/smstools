@@ -2000,6 +2000,8 @@ int check_memory(int *used_memory, int *max_memory, char *memory_list, size_t me
 
     // 3.1.12: With large number of messages and slow modem, much longer timeout than "1" is required.
     put_command(tmp, answer, size_answer, 10, EXPECT_OK_ERROR);
+    writelogfile(LOG_DEBUG, 0, "Command: %s", tmp);
+    writelogfile(LOG_DEBUG, 0, "Answer: %s", answer);
 
     log_single_lines = save_log_single_lines;
 
